@@ -1,6 +1,6 @@
 sum = 0
 
-with open('./Day2/input/2.txt', 'r') as file:
+with open('./Day02/input/2.txt', 'r') as file:
     for line in file:
         # Remove ':', ';', and ',' from the line
         cleaned_line = line.replace(':', '').replace(';', '').replace(',', '')

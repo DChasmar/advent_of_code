@@ -1,6 +1,6 @@
 numbers_array = []
-cards_array = [1] * 213
-with open('./Day4/input/4.txt', 'r') as file:
+sumVal = 0
+with open('./Day04/input/4.txt', 'r') as file:
     for line in file:
 
         # Split the modified line by ':' to extract numerical values
@@ -12,13 +12,11 @@ with open('./Day4/input/4.txt', 'r') as file:
             numbers = [int(value) for value in part.split() if value.isdigit()]
             numbers_array.append(numbers)
 
-for i, array in enumerate(numbers_array):
+for array in numbers_array:
     array_length = len(array)
     set_length = len(set(array))
     difference = array_length - set_length
-    
-    while difference > 0:
-        cards_array[i + difference] += cards_array[i]
-        difference -= 1
+    if difference > 0:
+        sumVal += 2 ** (difference - 1)
 
-print(sum(cards_array))
+print(sumVal)

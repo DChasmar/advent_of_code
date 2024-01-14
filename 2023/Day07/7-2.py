@@ -3,7 +3,7 @@ bets = []
 cards = ['J', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'Q', 'K', 'A']
 # Change J to having the lowest value
 cards_object = {'J': 0, '2': 1, '3': 2, '4': 3, '5': 4, '6': 5, '7': 6, '8': 7, '9': 8, 'T': 9, 'Q': 10, 'K': 11, 'A': 12}
-with open('./Day7/input/7.txt', 'r') as file:
+with open('./Day07/input/7.txt', 'r') as file:
     for line in file:
         # Split the modified line by ':' to extract numerical values
         parts = line.split(' ')

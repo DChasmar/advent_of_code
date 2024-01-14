@@ -1,4 +1,4 @@
-with open('./Day8/inputs/8.txt', 'r') as file:
+with open('./Day08/inputs/8.txt', 'r') as file:
     lines = file.readlines()
 
 # Create a dictionary from the lines
@@ -8,7 +8,7 @@ for line in lines:
     values_tuple = tuple(values[1:-1].split(", "))
     data[key] = values_tuple
 
-with open('./Day8/inputs/8-LR.txt', 'r') as file:
+with open('./Day08/inputs/8-LR.txt', 'r') as file:
     for line in file:
         LR = str(line)
 

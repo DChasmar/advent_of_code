@@ -1,4 +1,4 @@
-with open('./Day9/input/9.txt', 'r') as file:
+with open('./Day09/input/9.txt', 'r') as file:
     lines = file.readlines()
 
 total = 0

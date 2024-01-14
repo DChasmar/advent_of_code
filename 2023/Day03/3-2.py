@@ -30,7 +30,7 @@ lines.append(dots_array)
 sumVal = 0
 my_dict = {}
 
-with open('./Day3/input/3.txt', 'r') as file:
+with open('./Day03/input/3.txt', 'r') as file:
     for line in file:
         for char in line:
             new_line = ['.'] + list(line.strip()) + ['.']

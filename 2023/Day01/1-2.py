@@ -31,7 +31,7 @@ def find_last(word):
                     return forward_dict.index(substring) + 1
 
 # Read the .txt file
-with open('./Day1/input/1.txt', 'r') as words_file:
+with open('./Day01/input/1.txt', 'r') as words_file:
     words = words_file.read().split()
 
 for word in words:

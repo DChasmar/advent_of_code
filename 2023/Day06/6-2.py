@@ -1,5 +1,5 @@
 array = []
-with open('./Day6/input/6.txt', 'r') as file:
+with open('./Day06/input/6.txt', 'r') as file:
     for line in file:
         # Split the modified line by ':' to extract numerical values
         parts = line.split(':')

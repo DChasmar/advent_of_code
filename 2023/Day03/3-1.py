@@ -31,7 +31,7 @@ lines = []
 lines.append(dots_array)
 sumVal = 0
 
-with open('./Day3/input/3.txt', 'r') as file:
+with open('./Day03/input/3.txt', 'r') as file:
     for line in file:
         for char in line:
             # add dots at the BEGINNING and END of the array to avoid out-of-bounds error

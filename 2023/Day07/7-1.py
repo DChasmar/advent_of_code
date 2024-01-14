@@ -2,7 +2,7 @@ hands = []
 bets = []
 cards = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A']
 cards_object = {'2': 0, '3': 1, '4': 2, '5': 3, '6': 4, '7': 5, '8': 6, '9': 7, 'T': 8, 'J': 9, 'Q': 10, 'K': 11, 'A': 12}
-with open('./Day7/input/7.txt', 'r') as file:
+with open('./Day07/input/7.txt', 'r') as file:
     for line in file:
         # Split the modified line by ':' to extract numerical values
         parts = line.split(' ')
