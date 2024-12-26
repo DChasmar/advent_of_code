@@ -11,6 +11,13 @@ func AbsDifference(a, b int) int {
 	return b - a
 }
 
+func Abs(a int) int {
+	if a < 0 {
+		return -a
+	}
+	return a
+}
+
 func GCD(a, b int) int {
 	if b == 0 {
 		return a
@@ -40,4 +47,16 @@ func FirstOccurence(m1, b1, m2, b2 int) int {
 		}
 	}
 	return test1
+}
+
+func BitwiseXOR(a, b int) int {
+	return a ^ b
+}
+
+func SumIntArray(a []int) int {
+	sum := 0
+	for _, num := range a {
+		sum += num
+	}
+	return sum
 }

@@ -1,7 +1,9 @@
 package common
 
 import (
+	"fmt"
 	"log"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -78,4 +80,47 @@ func LineToIntArraySplitSpace(line string) []int {
 		arr[i] = num
 	}
 	return arr
+}
+
+func GridToTxt(grid [][]string, filename string) {
+	HEIGHT := len(grid)
+	WIDTH := len(grid[0])
+	file, err := os.Create(filename)
+	if err != nil {
+		fmt.Println("Error creating file:", err)
+		return
+	}
+	defer file.Close()
+
+	for y := 0; y < HEIGHT; y++ {
+		for x := 0; x < WIDTH; x++ {
+			file.WriteString(grid[y][x])
+		}
+		file.WriteString("\n")
+	}
+	fmt.Println("Grid exported to", filename)
+}
+
+func LineToArray(line string) []string {
+	return strings.Split(line, "")
+}
+
+func LineToByteArray(line string) []byte {
+	return []byte(line)
+}
+
+func ByteArrayToInt(b []byte) int {
+	num, err := strconv.Atoi(string(b))
+	if err != nil {
+		log.Fatalf("failed to convert %s to int: %v", string(b), err)
+	}
+	return num
+}
+
+func LineToInt(line string) int {
+	num, err := strconv.Atoi(line)
+	if err != nil {
+		log.Fatalf("failed to convert %s to int: %v", line, err)
+	}
+	return num
 }

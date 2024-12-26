@@ -30,3 +30,12 @@ func ReadFileLines(filePath string) ([]string, error) {
 func SortArray(array []int) {
 	sort.Ints(array)
 }
+
+func IntArrContains(arr []int, value int) bool {
+	for _, v := range arr {
+		if v == value {
+			return true
+		}
+	}
+	return false
+}
